@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RPG Dice</title>
+<!-- <link rel="shortcut icon" type="image/png" href="https://mrovpack.github.io/assets/icon.png"/> -->
+<link rel="stylesheet" href="https://mrovpack.github.io/assets/style.css">
+<style>
+
+a{
+  color: #f57c00;
+  text-decoration: none;
+}
+
+.center{
+  text-align: center;
+  margin: 20px;
+  background-color: #202020;
+  border-radius: 20px;
+  display: grid;
+  padding: 15px;
+}
+
+.row{
+  display: flex;
+  align-self: center;
+  padding: 5px;
+  justify-self: center;
+}
+
+ul{
+  width: 100px;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.dice{
+  display: flex;
+}
+
+.roll{
+  flex: 2 1 0px;
+  margin: 5px 1px;
+  border-radius: 10px;
+  background-color: inherit;
+  color: white;
+  border: 1px solid white;
+  height: 50px;
+  padding: 5px 2px;
+  font-family: Minecraft-Regular;
+}
+
+</style>
+</head>
+<body>
+
+  <div class="center">
+    <h2 id="result"></h2>
+    <h4 id="throws"></h4>
+  </div>
+
+  <div class="center dice" id="dice"></div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src="index.js"></script>
+
+</body>
+</html>
