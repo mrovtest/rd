@@ -1,0 +1,18 @@
+{
+          "background_color": "#fff",
+          "display": "standalone",
+          "orientation":"landscape",
+          "theme_color": "#fff",
+          "short_name": "RPG Dice",
+          "name": "The RPG Dice",
+          "description": "description or purpose of your progressive web app",
+          "lang": "en-US",
+          "icons": [
+          {
+            "src": "https://banner2.cleanpng.com/20180607/sfh/kisspng-d20-system-dice-dungeons-dragons-mutants-maste-d20-5b19c5c3ec84a6.2613027115284156839688.jpg",
+            "sizes": "512x512",
+            "type": "image/png"
+          }
+          ],
+          "start_url": "index.html?launcher=true"
+          }
