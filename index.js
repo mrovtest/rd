@@ -1,5 +1,3 @@
-// var dice = ["4", "6", "8", "10", "12", "20", "100"];
-
 var dice = {
   "4": "rgb(230, 206, 28)",
   "6": "rgb(82, 246, 242)",
@@ -35,13 +33,18 @@ function throwDice(number){
   var thrown = getRandom(number);
   console.log(thrown);
 
+  addThrow(thrown, number);
+
   var result = +current + +thrown;
-
   $("#result").html(result);
+}
 
-  if(components == ""){
-    $("#throws").html(thrown);
-  }else{
-    $("#throws").html(components + " + " + thrown);
-  }
+function addThrow(thrown, die){
+  let color = dice[die];
+
+  let span = document.createElement('span');
+  span.innerHTML = thrown + " ";
+  span.style['color'] = color;
+
+  $("#throws").append(span);
 }
