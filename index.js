@@ -1,9 +1,20 @@
-var dice = ["4", "6", "8", "10", "12", "20", "100"];
+// var dice = ["4", "6", "8", "10", "12", "20", "100"];
 
-for(item of dice){
+var dice = {
+  "4": "rgb(230, 206, 28)",
+  "6": "rgb(82, 246, 242)",
+  "8": "rgb(231, 0, 0)",
+  "10": "rgb(201, 15, 166)",
+  "12": "rgb(23, 219, 25)",
+  "20": "rgb(224, 141, 16)",
+  "100": "rgb(108, 108, 108)"
+}
+
+for(item of Object.keys(dice)){
   let button = document.createElement('button');
   button.className = "roll";
   button.innerHTML = "d" + item;
+  button.style["border"] = "2px solid " + dice[item];
 
   let onClick = 'throwDice("' + item + '")';
   button.setAttribute('onclick', onClick);
