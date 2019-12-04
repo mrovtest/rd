@@ -8,6 +8,10 @@ var dice = {
   "100": "rgb(108, 108, 108)"
 }
 
+var bonus = [
+  "-5", "-4", "-3", "-2", "-1", "+1", "+2", "+3", "+4", "+5"
+]
+
 for(item of Object.keys(dice)){
   let button = document.createElement('button');
   button.className = "roll";
@@ -18,6 +22,18 @@ for(item of Object.keys(dice)){
   button.setAttribute('onclick', onClick);
 
   $("#dice").append(button);
+}
+
+for(item of bonus){
+  let button = document.createElement('button');
+  button.className = "bonu";
+  button.innerHTML = item;
+  button.style["border"] = "2px solid " + "gray";
+
+  let onClick = 'addBonus("' + item + '")';
+  button.setAttribute('onclick', onClick);
+
+  $("#bonus").append(button);
 }
 
 function getRandom(max) {
@@ -45,6 +61,18 @@ function addThrow(thrown, die){
   let span = document.createElement('span');
   span.innerHTML = thrown + " ";
   span.style['color'] = color;
+
+  $("#throws").append(span);
+}
+
+function addBonus(points){
+  let span = document.createElement('span');
+  span.innerHTML = points + " ";
+  span.style['color'] = "#606060";
+
+  var current = $("#result").html();
+  var result = +current + +points;
+  $("#result").html(result);
 
   $("#throws").append(span);
 }
