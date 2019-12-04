@@ -68,7 +68,7 @@ function addThrow(thrown, die){
 function addBonus(points){
   let span = document.createElement('span');
   span.innerHTML = points + " ";
-  span.style['color'] = "#606060";
+  span.style['color'] = "#758e00";
 
   var current = $("#result").html();
   var result = +current + +points;
